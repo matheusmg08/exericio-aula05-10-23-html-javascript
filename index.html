@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>For e while</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h2>Digite o número que deseja a tabuada:</h2>
+        <input type="number" id="numero"><br/>
+        <script>
+            function tabuada(){   
+            var numero = document.getElementById ("numero").value;     
+            var num = numero;
+            var resp =  document.getElementById ("resp");
+            for (var i=1; i<=10; i++){
+                var r = num * i;
+                resp.innerHTML = resp.innerHTML + num + " x " + i + " é igual a " + r + "<br>";
+            }
+        }
+        </script>
+        <a onclick="tabuada()">Tabuada</a><br/>
+        <div id="resp"></div>
+    </body>
+</html>
